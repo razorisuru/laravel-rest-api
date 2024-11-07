@@ -19,7 +19,8 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::middleware('api_key')->get('/student', [StudentController::class, 'index']);
+// Route::middleware('api_key')->get('/student', [StudentController::class, 'index']);
+Route::get('/student', [StudentController::class, 'index']);
 
 Route::get('/student/show/{id}', [StudentController::class, 'show']);
 
